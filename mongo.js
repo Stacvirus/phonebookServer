@@ -26,7 +26,7 @@ const person = new Person({
     important: true,
 })
 
-process.argv[3] && person.save().then(result => {
+process.argv[3] && person.save().then(() => {
     // console.log('person saved!')
     // mongoose.connection.close()
 })
