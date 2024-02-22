@@ -10,7 +10,6 @@ const password = process.argv[2]
 const url =
     `mongodb+srv://parfaitandre5:${password}@phonebookv2.ztyamoo.mongodb.net/phoneBook`
 
-const pwd = '7gbk6fyS1IHPGYYb'
 mongoose.set('strictQuery', false)
 
 mongoose.connect(url)
