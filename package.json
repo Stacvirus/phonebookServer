@@ -1,0 +1,24 @@
+{
+  "name": "phonebookserver",
+  "version": "1.0.0",
+  "description": "the server of the phonebook app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf dist && cd ~/Downloads/PKF48Docs/doc1/webDev/React/exoSubmission/part3/Phonebook && npm run build && cp -r dist ~/Downloads/PKF48Docs/doc1/webDev/React/exoSubmission/part3/phonebookServer",
+    "deploy": "fly deploy",
+    "deplot:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "author": "stacvirus",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
