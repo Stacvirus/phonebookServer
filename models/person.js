@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
-
-const password = process.argv[2]
-
+require('dotenv').config()
 // DO NOT SAVE YOUR PASSWORD TO GITHUB!!
 const url = process.env.MONGODB_URI
 
@@ -15,8 +13,19 @@ mongoose.connect(url)
     })
 
 const personSchema = new mongoose.Schema({
-    name: String,
-    number: String,
+    name: {
+        type: String,
+        minLength: 3,
+        required: true
+    },
+    number: {
+        type: String,
+        validate: {
+            validator: (v) => /\d{2,3}-\d{7,}/.test(v),
+            message: (props) => `${props.value} is not a valid phone number`,
+        },
+        require: [true, 'User phone number required'],
+    },
 })
 
 const Person = mongoose.model('person', personSchema)

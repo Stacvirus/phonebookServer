@@ -1,6 +1,10 @@
+get http://localhost:3005/info
+###
 get http://localhost:3005/api/persons
 ###
-DELETE http://localhost:3005/api/persons/4
+DELETE http://localhost:3005/api/persons/65a10363f3467fba4a855e89
+###
+get http://localhost:3005/api/persons/65a10363f3467fba4a855e89 
 ###
 POST http://localhost:3005/api/persons
 Content-Type: application/json
