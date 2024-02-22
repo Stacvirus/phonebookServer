@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ~/Downloads/PKF48Docs/doc1/webDev/React/exoSubmission/part3/Phonebook && npm run build && cp -r dist ~/Downloads/PKF48Docs/doc1/webDev/React/exoSubmission/part3/phonebookServer",
     "deploy": "fly deploy",
-    "deplot:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "stacvirus",
   "license": "ISC",
