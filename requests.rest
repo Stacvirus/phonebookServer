@@ -9,3 +9,15 @@ Content-Type: application/json
     "name": "Takam Christophe",
     "number": "237-86512397"
 }
+###
+get https://phonebookserver-kngc.onrender.com/api/persons
+###
+DELETE https://phonebookserver-kngc.onrender.com/api/persons/4
+###
+POST https://phonebookserver-kngc.onrender.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Takam Christophe",
+    "number": "237-86512397"
+}
